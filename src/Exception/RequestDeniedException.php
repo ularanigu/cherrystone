@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @link    <https://github.com/ularanigu/cherrystone>.
  */
 
-namespace Ularanigu\Cherrystone\Logging\Exception;
+namespace Ularanigu\Cherrystone\Exception;
 
 /**
  * @class RequestDeniedException.
