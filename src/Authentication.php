@@ -31,7 +31,7 @@ class Authentication implements AuthenticationInterface
     public function __construct(array $options)
     {
         if (!empty($options)) {
-            $this->format = isset($options['format']) && \in_array($options['format'], \AUTHENTICATION_FORMATS, true) ? $options : \null;
+            $this->format = isset($options['format']) && \in_array($options['format'], \AUTHENTICATION_FORMATS, \true) ? $options : \null;
         }
     }
 }
