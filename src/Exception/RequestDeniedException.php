@@ -13,6 +13,6 @@ namespace Ularanigu\Cherrystone\Exception;
 /**
  * @class RequestDeniedException.
  */
-class RequestDeniedException extends AuthenticationDenied implements ExceptionInterface
+class RequestDeniedException extends AuthenticationDeniedException implements ExceptionInterface
 {
 }
