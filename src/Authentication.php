@@ -34,4 +34,19 @@ class Authentication implements AuthenticationInterface
             $this->format = isset($options['format']) && \in_array($options['format'], \AUTHENTICATION_FORMATS, \true) ? $options : \null;
         }
     }
+    
+    /**
+     * Set the authentication format.
+     *
+     * @param string $format The authentication format.
+     *
+     * @return bool Return true if the format is valid and set and false otherwise.
+     */
+    public function setFormat(string $format): bool
+    {
+        if (!\in_array($format, \AUTHENTICATION_FORMATS, \true)) {
+            return \false;
+        }
+        $this->format = $format;
+    }
 }
