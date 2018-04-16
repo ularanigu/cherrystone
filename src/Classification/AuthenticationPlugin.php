@@ -13,6 +13,6 @@ namespace Ularanigu\Cherrystone\Classification;
 /**
  * @interface AuthenticationPlugin.
  */
-interface AuthenticationPlugin
+interface AuthenticationPlugin extends AuthenticationObject
 {
 }
