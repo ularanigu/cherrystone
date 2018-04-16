@@ -9,7 +9,4 @@ declare(strict_types=1);
  */
 
 define('CHERRYSTONE_VERSION_ID', '100000000');
-define('CHERRYSTONE_VERSION', '1.0.0')
-define('AUTHENTICATION_FORMATS', [
-    'form'
-]);
+define('CHERRYSTONE_VERSION', '1.0.0');
