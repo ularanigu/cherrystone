@@ -12,6 +12,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.0",
+        "ramsey/uuid": ">=3.7",
         "ext-json": "*"
     },
     "authors": [
