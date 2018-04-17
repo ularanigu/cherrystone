@@ -24,7 +24,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ularanigu\\Cherrystone\\": "./src",
+            "Ularanigu\\Cherrystone\\": "./src"
         },
         "files": [
             "./lib/runtime.php",
