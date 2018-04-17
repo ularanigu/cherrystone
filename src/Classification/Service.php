@@ -11,8 +11,8 @@ declare(strict_types=1);
 namespace Ularanigu\Cherrystone\Classification;
 
 /**
- * @interface AuthenticationPlugin.
+ * @interface Service.
  */
-interface AuthenticationPlugin extends AuthenticationObject
+interface Service
 {
 }
