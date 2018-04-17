@@ -10,11 +10,9 @@ declare(strict_types=1);
 
 namespace Ularanigu\Cherrystone\Exception;
 
-use Exception;
-
 /**
  * @class InvalidTokenAuthentication.
  */
-class InvalidTokenAuthentication extends Exception implements ExceptionInterface
+class InvalidTokenAuthentication extends AuthenticationDeniedException implements ExceptionInterface
 {
 }
