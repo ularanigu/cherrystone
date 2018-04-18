@@ -34,6 +34,7 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @param array  $serviceConfig The service config.
      * @param string $alias         The short prefixed name for the service.
+     * @param bool   $checkReq      Should we check your system before using the service?
      *
      * @return void Return nothing.
      */
