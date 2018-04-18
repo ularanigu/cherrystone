@@ -2,7 +2,6 @@
     "name": "ularanigu/cherrystone",
     "description": "An authentication library designed to ensure security on web authentication systems.",
     "keywords": [
-        "php7",
         "authentication-middleware",
         "authentication-system",
         "web-security",
