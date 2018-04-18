@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 namespace Ularanigu\Cherrystone\Service;
 
-use Ularanigu\Cherrystone\Exception\InvalidServiceConfig;
+use Ularanigu\Cherrystone\Exception\InvalidServiceConfigException;
 use Ularanigu\Cherrystone\Classification\Service;
 use Ularanigu\Cherrystone\Utils\Checker;
 use InvalidArgumentException;
@@ -69,8 +69,10 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @param array $serviceConfig The service config.
      *
-     * @throws InvalidServiceConfig If no directive was passed.
-     * @throws InvalidServiceConfig If the directive is unknown or unsupported.
+     * @throws InvalidServiceConfigException If no directive was passed.
+     * @throws InvalidServiceConfigException If the directive is unknown or unsupported.
+     * @throws InvalidServiceConfigException If a directive was repeated.
+     * @throws InvalidArgumentException      If the logger key contains an invalid data type.
      *
      * @return void Return nothing.
      */
@@ -78,15 +80,15 @@ class BrowserBasedService extends ServiceConfig implements Service
         array $serviceConfig
     ): void {
         if (!array_key_exists('directives', $serviceConfig) || !is_array($serviceConfig['directives']) || empty($serviceConfig['directives'])) {
-            throw new InvalidServiceConfig('No directive was passed.');
+            throw new InvalidServiceConfigException('No directive was passed.');
         }
         $used = array();
         foreach ($serviceConfig['directives'] as $directive) {
             if (!in_array($directive, static::$allowedDirectives['browser_directives'], true)) {
-                throw new InvalidServiceConfig('A directive was unsupported or unknown.');
+                throw new InvalidServiceConfigException('A directive was unsupported or unknown.');
             }
             if (in_array($directive, $used, true)) {
-                throw new InvalidServiceConfig('A directive was repeated.');
+                throw new InvalidServiceConfigException('A directive was repeated.');
             }
             array_push($used, $directive);
         }
