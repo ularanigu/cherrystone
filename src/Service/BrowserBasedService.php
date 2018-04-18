@@ -12,7 +12,6 @@ namespace Ularanigu\Cherrystone\Service;
 
 use Ularanigu\Cherrystone\Exception\InvalidServiceConfigException;
 use Ularanigu\Cherrystone\Classification\Service;
-use Ularanigu\Cherrystone\Utils\Checker;
 use InvalidArgumentException;
 
 /**
