@@ -37,9 +37,11 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @return void Return nothing.
      */
-    public function __construct(array $serviceConfig = array(), string $alias = '')
+    public function __construct(array $serviceConfig = array(), string $alias = '', bool $checkReqs = false)
     {
-        $this->check();
+        if ($checkReqs) {
+            $this->check();
+        }
         $alias = trim($alias);
         if (!empty($alias)) {
             $this->alias = $alias;
