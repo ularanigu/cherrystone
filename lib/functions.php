@@ -27,6 +27,7 @@ function cs_check_gb(): void
                 E_USER_ERROR
             );
         } else {
+            return 'void_request';
         }
     } else {
         return 'use_firestorm_polyfill';
