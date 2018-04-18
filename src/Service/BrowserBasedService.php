@@ -82,7 +82,7 @@ class BrowserBasedService extends ServiceConfig implements Service
         }
         $used = array();
         foreach ($serviceConfig['directives'] as $directive) {
-            if (!in_array($directive, static::$allowedDirectives, true)) {
+            if (!in_array($directive, static::$allowedDirectives['browser_directives'], true)) {
                 throw new InvalidServiceConfig('A directive was unsupported or unknown.');
             }
             if (in_array($directive, $used, true)) {
