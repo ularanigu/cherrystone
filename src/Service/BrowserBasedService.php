@@ -37,10 +37,8 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @return void Return nothing.
      */
-    public function __construct(
-        array $serviceConfig = array(),
-        string $alias = ''
-    ) {
+    public function __construct(array $serviceConfig = array(), string $alias = '')
+    {
         $this->check();
         $alias = trim($alias);
         if (!empty($alias)) {
@@ -75,9 +73,8 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @return void Return nothing.
      */
-    private validServiceConfig(
-        array $serviceConfig
-    ): void {
+    private validServiceConfig(array $serviceConfig): void
+    {
         if (!array_key_exists('directives', $serviceConfig) || !is_array($serviceConfig['directives']) || empty($serviceConfig['directives'])) {
             throw new InvalidServiceConfigException('No directive was passed.');
         }
@@ -107,10 +104,8 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @return array Return an array of information about the validation.
      */
-    public function validate(
-        string $knownUserAgent,
-        string $usersUserAgent
-    ): array {
+    public function validate(string $knownUserAgent, string $usersUserAgent): array
+    {
         $info = array();
         $directives = $this->serviceConfig['directives'];
         foreach ($directives as $directive) {
@@ -148,11 +143,8 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @return array Return the parts from both user agents and log correcty based on service config.
      */
-    private function stripUserAgent(
-        string $directive,
-        string $knownUserAgent,
-        string $usersUserAgent
-    ): array {
+    private function stripUserAgent(string $directive, string $knownUserAgent, string $usersUserAgent): array
+    {
         $knownUserAgentInfo = get_browser($knownUserAgent, true);
         $usersUserAgentInfo = get_browser($usersUserAgent, true);
         $len = strlen('service.check_');
@@ -168,7 +160,8 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @return void Return nothing.
      */
-    private function check(): void {
+    private function check(): void
+    {
         cs_check_gb();
     }
 }
