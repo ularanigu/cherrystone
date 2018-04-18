@@ -59,7 +59,7 @@ class BrowserBasedService extends ServiceConfig implements Service
     }
     
     /**
-     * Check to see if the directive is valid.
+     * Check to see if the service config is valid.
      *
      * @link <https://secure.php.net/manual/en/function.array-key-exists.php>.
      * @link <https://secure.php.net/manual/en/function.array-push.php>.
@@ -73,7 +73,7 @@ class BrowserBasedService extends ServiceConfig implements Service
      *
      * @return void Return nothing.
      */
-    private validServiceConfig(array $serviceConfig): void
+    private function validServiceConfig(array $serviceConfig): void
     {
         if (!array_key_exists('directives', $serviceConfig) || !is_array($serviceConfig['directives']) || empty($serviceConfig['directives'])) {
             throw new InvalidServiceConfigException('No directive was passed.');
