@@ -157,8 +157,8 @@ class BrowserBasedService extends ServiceConfig implements Service
         $len = strlen('service.check_');
         $directiveAlias = substr($directive, $len);
         return array(
-            $knownUserAgentInfo[$directiveAlias],
-            $usersUserAgentInfo[$directiveAlias]
+            (string) $knownUserAgentInfo[$directiveAlias],
+            (string) $usersUserAgentInfo[$directiveAlias]
         );
     }
     
