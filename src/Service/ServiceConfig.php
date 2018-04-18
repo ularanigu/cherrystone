@@ -26,7 +26,7 @@ class ServiceConfig
             'service.check_browser',
             'service.check_version',
             'service.check_majorver',
-            'service.check_minorver'
+            'service.check_minorver',
             'service.check_cssversion',
             'service.check_frames',
             'service.check_iframes',
