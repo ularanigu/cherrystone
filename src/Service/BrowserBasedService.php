@@ -25,7 +25,7 @@ class BrowserBasedService extends ServiceConfig implements Service
     private $errors = array();
     
     /** @var string $alias The short prefixed name for the service. */
-    private $alias = null;
+    public $alias = null;
     
     /** @var array|null $serviceConfig The servce config. */
     private $serviceConfig = null;
@@ -33,14 +33,14 @@ class BrowserBasedService extends ServiceConfig implements Service
     /**
      * Constructor
      *
-     * @param string $alias         The short prefixed name for the service.
      * @param array  $serviceConfig The service config.
+     * @param string $alias         The short prefixed name for the service.
      *
      * @return void Return nothing.
      */
     public function __construct(
-        string $alias = '',
-        array $serviceConfig = array()
+        array $serviceConfig = array(),
+        string $alias = ''
     ) {
         $this->check();
         $alias = trim($alias);
