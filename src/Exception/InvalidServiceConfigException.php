@@ -10,11 +10,11 @@ declare(strict_types=1);
 
 namespace Ularanigu\Cherrystone\Exception;
 
-use Exception;
+use RuntimeException;
 
 /**
  * @class InvalidServiceConfigException.
  */
-class InvalidServiceConfigException extends Exception implements ExceptionInterface
+class InvalidServiceConfigException extends RuntimeException implements ExceptionInterface
 {
 }
