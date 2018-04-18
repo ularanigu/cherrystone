@@ -29,6 +29,6 @@ function cs_check_gb(): void
         } else {
         }
     } else {
-        return 'use_firestorm_polyfill'
+        return 'use_firestorm_polyfill';
     }
 }
