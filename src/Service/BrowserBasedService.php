@@ -23,7 +23,7 @@ class BrowserBasedService extends ServiceConfig implements Service
     /** @var array $errors An array of errors during service check. */
     private $errors = array();
     
-    /** @var string $alias The short prefixed name for the service. */
+    /** @var string|null $alias The short prefixed name for the service. */
     public $alias = null;
     
     /** @var array|null $serviceConfig The servce config. */
