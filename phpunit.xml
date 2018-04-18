@@ -41,6 +41,6 @@
         <log type="coverage-clover" target="./build/logs/clover.xml" />
     </logging>
     <php>
-        <ini name="browscap" value="./browscap.ini">              
+        <ini name="browscap" value="./browscap.ini" />              
     </php>
 </phpunit>
