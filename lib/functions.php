@@ -8,13 +8,13 @@ declare(strict_types=1);
  * @link    <https://github.com/ularanigu/cherrystone>.
  */
 
-function cs_check(): void
+function cs_check_gb(): void
 {
     if (!function_exists('get_browser')) {
         trigger_error(
             'The get_browser() function does not exists.',
             E_USER_ERROR
-        )
+        );
     } elseif (!file_exists(ini_get('browscap'))) {
         trigger_error(
             'The browscap leads to a file that does not exist.',
