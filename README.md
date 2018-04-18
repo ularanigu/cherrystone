@@ -1,2 +1,1 @@
-# cherrystone
-🔒A high level authentication firewall for php login systems.
+[![Build Status](https://travis-ci.org/ularanigu/cherrystone.svg?branch=master)](https://travis-ci.org/ularanigu/cherrystone)
