@@ -15,4 +15,7 @@ namespace Ularanigu\Cherrystone\Authentication;
  */
 class AuthenticationConfig
 {
+
+    /** @var array $authenticationConfig The authentication config. */
+    protected static $authenticationConfig = array();
 }
