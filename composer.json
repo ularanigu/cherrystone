@@ -1,5 +1,5 @@
 {
-    "name": "ularanigu/cherrystone",
+    "name":        "ularanigu/cherrystone",
     "description": "Designed to ensure security on web authentication systems.",
     "keywords": [
         "authentication-middleware",
@@ -10,16 +10,15 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.2",
-        "ramsey/uuid": "^3.7",
-        "swiftmailer/swiftmailer": "^6",
+        "php":           ">=7.2",
+        "ramsey/uuid":   "^3.7",
         "psr/container": "^1",
-        "ext-json": "*"
+        "ext-json":      "*"
     },
     "authors": [
         {
-            "name": "Nicholas English",
-            "email": "nenglish6657@gmail.com",
+            "name":     "Nicholas English",
+            "email":    "nenglish6657@gmail.com",
             "homepage": "https://github.com/ularanigu"
         }
     ],
@@ -32,14 +31,20 @@
             "./lib/functions.php"
         ]
     },
+    "suggest": {
+        "nexmo/client":            "Require to send text messages with Nexmo.",
+        "twilio/sdk":              "Require to send text messages with twilio.",
+        "swiftmailer/swiftmailer": "Require to send emails with swiftmailer.",
+        "phpmailer/phpmailer":     "Require to send emails with phpmailer."
+    },
     "require-dev": {
         "phpunit/phpunit": "^7",
-        "vimeo/psalm": "^1"
+        "vimeo/psalm":     "^1"
     },
     "config": {
-        "preferred-install": "dist",
+        "preferred-install":   "dist",
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages":       true
     },
     "prefer-stable": true
 }
