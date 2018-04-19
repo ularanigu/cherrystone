@@ -45,6 +45,14 @@ class ServiceConfig
             'service.check_stripper',
             'service.check_wap',
             'service.check_netclr'
+        ),
+        'device_directives' => array(
+            'service.check_device_type',
+            'service.check_ip',
+            'service.check_bots',
+            'service.check_os',
+            'service.check_brand',
+            'service.check_model'
         )
     );
 }
