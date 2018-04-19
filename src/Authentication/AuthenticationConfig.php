@@ -20,7 +20,7 @@ class AuthenticationConfig
     protected static $authenticationConfig = array(
         'directives' => array(
             'auth.use_strict_mode',
-            'auth.use_service_provider'
+            'auth.use_service_provider',
             'auth.use_internal_messanger',
             'auth.log_communications'
         ),
