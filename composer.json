@@ -29,9 +29,6 @@
             "./lib/functions.php"
         ]
     },
-    "suggest": {
-        "symfony/yaml": "To log information in yaml format."
-    },
     "require-dev": {
         "phpunit/phpunit": "^7",
         "vimeo/psalm": "^1"
