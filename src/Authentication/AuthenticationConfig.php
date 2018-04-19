@@ -23,6 +23,10 @@ class AuthenticationConfig
             'auth.use_service_provider'
             'auth.use_internal_messanger',
             'auth.log_communications'
+        ),
+        'service_providers' => array(
+            'nexmo',
+            'twilio'
         )
     );
 }
