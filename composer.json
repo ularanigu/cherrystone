@@ -10,8 +10,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.2",
-        "ext-json": "*"
+        "php": ">=7.2"
     },
     "authors": [
         {
