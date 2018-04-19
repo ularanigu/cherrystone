@@ -13,7 +13,7 @@ namespace Ularanigu\Cherrystone\Exception;
 use RuntimeException;
 
 /**
- * @class InvalidServiceConfigException.
+ * @class InvalidAuthenticationConfigException.
  */
 class InvalidAuthenticationConfigException extends RuntimeException implements ExceptionInterface
 {
