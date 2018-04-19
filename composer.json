@@ -1,12 +1,12 @@
 {
     "name": "ularanigu/cherrystone",
-    "description": "An authentication library designed to ensure security on web authentication systems.",
+    "description": "Designed to ensure security on web authentication systems.",
     "keywords": [
         "authentication-middleware",
         "authentication-system",
         "web-security",
         "php-security",
-        "secure-by-default"
+        "php72"
     ],
     "license": "MIT",
     "require": {
