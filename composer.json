@@ -10,10 +10,13 @@
     ],
     "license": "MIT",
     "require": {
-        "php":           ">=7.2",
-        "ramsey/uuid":   "^3.7",
-        "psr/container": "^1",
-        "ext-json":      "*"
+        "php":                     ">=7.2",
+        "doctrine/orm":            "^2",
+        "swiftmailer/swiftmailer": "^6",
+        "symfony/yaml":            "^4",
+        "ramsey/uuid":             "^3",
+        "psr/container":           "^1",
+        "ext-json":                "*"
     },
     "authors": [
         {
@@ -30,12 +33,6 @@
             "./lib/runtime.php",
             "./lib/functions.php"
         ]
-    },
-    "suggest": {
-        "nexmo/client":            "Require to send text messages with Nexmo.",
-        "twilio/sdk":              "Require to send text messages with twilio.",
-        "swiftmailer/swiftmailer": "Require to send emails with swiftmailer.",
-        "phpmailer/phpmailer":     "Require to send emails with phpmailer."
     },
     "require-dev": {
         "phpunit/phpunit": "^7",
