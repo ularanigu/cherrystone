@@ -11,12 +11,13 @@ declare(strict_types=1);
 define('CHERRYSTONE_VERSION_ID', '100000000');
 define('CHERRYSTONE_VERSION', '1.0.0');
 
-$httpMethod = $_SERVER['REQUEST_METHOD'];
-if (in_array($httpMethod, array('POST', 'GET'))) {
-    try {
-        (new XSRFValidation)->checkToken();
-    } catch (XSRFSecurityException $e) {
-        echo (new Ularanigu\Firestorm\SecurityView)->show($colorful);
-        exit();
+if (isset($httpMethod = $_SERVER['REQUEST_METHOD'])) 
+    if (in_array($httpMethod, array('POST', 'GET'))) {
+        try {
+            (new XSRFValidation)->checkToken();
+        } catch (XSRFSecurityException $e) {
+            echo (new Ularanigu\Firestorm\SecurityView)->show($colorful);
+            exit();
+        }
     }
 }
