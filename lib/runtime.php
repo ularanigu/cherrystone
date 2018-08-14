@@ -11,7 +11,7 @@ declare(strict_types=1);
 define('CHERRYSTONE_VERSION_ID', '100000000');
 define('CHERRYSTONE_VERSION', '1.0.0');
 
-if (isset($httpMethod = $_SERVER['REQUEST_METHOD'])) 
+if (isset($httpMethod = $_SERVER['REQUEST_METHOD'])) {
     if (in_array($httpMethod, array('POST', 'GET'))) {
         try {
             (new XSRFValidation)->checkToken();
