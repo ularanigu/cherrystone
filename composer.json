@@ -18,13 +18,6 @@
         "psr/container":           "^1",
         "ext-json":                "*"
     },
-    "authors": [
-        {
-            "name":     "Nicholas English",
-            "email":    "nenglish6657@gmail.com",
-            "homepage": "https://github.com/ularanigu"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Ularanigu\\Cherrystone\\": "./src"
