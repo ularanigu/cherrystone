@@ -16,7 +16,7 @@ if (isset($httpMethod = $_SERVER['REQUEST_METHOD']))
         try {
             (new XSRFValidation)->checkToken();
         } catch (XSRFSecurityException $e) {
-            echo (new Ularanigu\Firestorm\SecurityView)->show($colorful);
+            echo (new Ularanigu\Firestorm\SecurityView)->show('colorful');
             exit();
         }
     }
