@@ -31,7 +31,7 @@ class Utils
      *
      * @return string The generated token.
      */
-    public function generateToken(): string
+    public static function generateToken(): string
     {
         return base64_encode(openssl_random_pseudo_bytes(16));
     }
