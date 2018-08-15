@@ -15,4 +15,14 @@ namespace Ularanigu\Firestorm;
  */
 class Utils
 {
+
+    /**
+     * Generate the token name.
+     *
+     * @return string The generated token name.
+     */
+    public static function generateTokenName(): string
+    {
+        return 'xsrf.validation.firestorm';
+    }
 }
