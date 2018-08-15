@@ -4,5 +4,6 @@
        totallyTyped="true">
     <projectFiles>
         <directory name="./src" />
+        <directory name="./fs" />
     </projectFiles>
 </psalm>
