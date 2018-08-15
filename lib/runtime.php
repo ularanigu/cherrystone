@@ -19,7 +19,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     if (in_array($httpMethod, array('POST', 'GET'))) {
         try {
             (new XSRFValidation)->checkToken();
-        } catch (XSRFSecurityException $e) {
+        } catch (XSRFException $e) {
             echo (new Ularanigu\Firestorm\SecurityView)->show('colorful');
             exit();
         }
