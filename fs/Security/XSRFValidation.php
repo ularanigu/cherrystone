@@ -18,4 +18,29 @@ use Ularanigu\Firestorm\Exception\XSRFException;
  */
 class XSRFValidation extends Utils
 {
+
+    /** @var string $xsrfField The xsrf field. */
+    private static $xsrfField;
+
+    /**
+     *
+     *
+     *
+     */
+    public function checkToken(): void
+    {
+    }
+
+    /**
+     * Generate the html field.
+     *
+     * @param string $tokenName The token name.
+     * @param string $token     The token.
+     *
+     * @return string The html xsrf field.
+     */
+    private function xsrfField(string $tokenName, string $token): string
+    {
+        return '<input id="xsrf.auth" name="' . $tokenName . '" type="hidden" value="' . $token . '" />'
+    }
 }
