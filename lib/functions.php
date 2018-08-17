@@ -8,12 +8,19 @@ declare(strict_types=1);
  * @link    <https://github.com/ularanigu/cherrystone>.
  */
 
-namespace Ularanigu\Cherrystone;
-
 /**
  * @function version().
  */
 function version(): string
 {
-    return \json_encode(array(\CHERRYSTONE_VERSION_ID, \CHERRYSTONE_VERSION));
+    return json_encode([
+        'cherrystone' => [
+            CHERRYSTONE_VERSION_ID,
+            CHERRYSTONE_VERSION
+        ],
+        'firestorm' => [
+            FIRESTORM_VERSION_ID,
+            FIRESTORM_VERSION
+        ],
+    ]);
 }
