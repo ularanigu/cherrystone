@@ -11,6 +11,9 @@ declare(strict_types=1);
 define('CHERRYSTONE_VERSION_ID', '100000000');
 define('CHERRYSTONE_VERSION', '1.0.0');
 
+define('FIRESTORM_VERSION_ID', '100000000');
+define('FIRESTORM_VERSION', '1.0.0');
+
 use Ularanigu\Firestorm\Exception\XSRFException;
 use Ularanigu\Firestorm\Security\XSRFValidation;
 
