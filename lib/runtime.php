@@ -16,7 +16,7 @@ use Ularanigu\Firestorm\Security\XSRFValidation;
 
 if (isset($_SERVER['REQUEST_METHOD'])) {
     $httpMethod = $_SERVER['REQUEST_METHOD'];
-    if (in_array($httpMethod, array('POST', 'GET', 'PUT' 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'))) {
+    if (in_array($httpMethod, array('POST', 'GET', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'))) {
         try {
             (new XSRFValidation)->checkToken();
         } catch (XSRFException $e) {
