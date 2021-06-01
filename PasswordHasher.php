@@ -144,7 +144,6 @@ final class PasswordHasher extends AbstractPasswordHasher implements PasswordHas
      */
     public function needsRehash(string $hash): bool
     {
-        
         switch ($this->passwordAlgo) {
             case \PASSWORD_ARGON2I:
             case \PASSWORD_ARGON2ID:
