@@ -47,6 +47,9 @@ final class PasswordHasher extends AbstractPasswordHasher implements PasswordHas
         $resolver = new OptionsResolver();
         $this->configureOptions($resolver);
         $this->options = $resolver->resolve($options);
+        if (!$resolver->isMissing('salt') && $this->passwordAlgo !== \PASSWORD_PBKDF2) {
+            unset($this->options['salt']);
+        }
         return $this;
     }
 
@@ -182,11 +185,11 @@ final class PasswordHasher extends AbstractPasswordHasher implements PasswordHas
         ]);
         if ($this->passwordAlgo === \PASSWORD_PBKDF2) {
             $resolver->setRequired('algo');
+            $resolver->setAllowedTypes('algo', 'string');
             $resolver->setAllowedValues('algo', \hash_algos());
             $resolver->setRequired('salt');
         }
         $resolver->setAllowedTypes('cost', 'int');
-        $resolver->setAllowedTypes('algo', 'string');
         $resolver->setAllowedTypes('salt', 'string');
         $resolver->setAllowedTypes('iterations', 'int');
     }
