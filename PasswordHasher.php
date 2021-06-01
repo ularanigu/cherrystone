@@ -13,7 +13,7 @@ use InvalidArgumentException;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * The sodium password hasher.
+ * The password hasher.
  */
 final class PasswordHasher extends AbstractPasswordHasher implements PasswordHasherInterface
 {
