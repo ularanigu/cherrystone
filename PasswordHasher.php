@@ -19,7 +19,7 @@ final class PasswordHasher extends AbstractPasswordHasher implements PasswordHas
 {
     use PasswordLengthChecker;
 
-    /** @var array $options The pbkdf2 hasher options. */
+    /** @var array $options The password hasher options. */
     private array $options = [];
 
     /**
