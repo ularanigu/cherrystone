@@ -182,6 +182,7 @@ final class PasswordHasher extends AbstractPasswordHasher implements PasswordHas
         ]);
         if ($this->passwordAlgo === \PASSWORD_PBKDF2) {
             $resolver->setRequired('algo');
+            $resolver->setAllowedValues('algo', \hash_algos());
             $resolver->setRequired('salt');
         }
         $resolver->setAllowedTypes('cost', 'int');
